@@ -4,12 +4,12 @@ import Order from './Order';
 import Inventory from './Inventory';
 
 class App extends React.Component {
-  render() {
+  render () {
     /* comment */
     return (
-      <div className="catch-of-the-day">
-        <div className="menu">
-          <Header />
+      <div className='catch-of-the-day'>
+        <div className='menu'>
+          <Header tagline='Fresh Seafood Market' />
         </div>
         <Order />
         <Inventory />
@@ -18,4 +18,4 @@ class App extends React.Component {
   }
 }
 
-export default App
+export default App;

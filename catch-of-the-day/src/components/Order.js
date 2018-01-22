@@ -1,7 +1,7 @@
 import React from 'react';
 
 class Order extends React.Component {
-  render() {
+  render () {
     /* comment */
     return (
       <div className="order">
@@ -10,4 +10,4 @@ class Order extends React.Component {
   }
 }
 
-export default Order
+export default Order;
