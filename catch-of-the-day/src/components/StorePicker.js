@@ -17,8 +17,9 @@ class StorePicker extends React.Component {
     /*stopped form from submitting*/
     event.preventDefault();
     //grab text from box
-    console.log(this.storeInput.value);
+    const storeId = this.storeInput.value;
     //transition from / to store/id
+    this.context.router.transitionTo(`/store/${storeId}`);
   }
 
   render () {
