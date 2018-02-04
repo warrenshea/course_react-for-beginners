@@ -2,7 +2,6 @@ import React from 'react';
 import { getFunName } from '../helpers';
 
 class StorePicker extends React.Component {
-
 /*
   constructor() {
     super(); //runs React.Component
@@ -13,12 +12,12 @@ class StorePicker extends React.Component {
   }
 */
 
-  goToStore(event) {
-    /*stopped form from submitting*/
+  goToStore (event) {
+    /* stopped form from submitting */
     event.preventDefault();
-    //grab text from box
+    // grab text from box
     const storeId = this.storeInput.value;
-    //transition from / to store/id
+    // transition from / to store/id
     this.context.router.transitionTo(`/store/${storeId}`);
   }
 
@@ -26,11 +25,11 @@ class StorePicker extends React.Component {
     /* comment */
     return (
       <form action='' className='store-selector' onSubmit={(e) => this.goToStore(e)}>
-        {/* this will bind the goToStore 'this' properly */}
-        {/*<form action='' className='store-selector' onSubmit={this.goToStore.bind(this)}> */}
+        {/*  this will bind the goToStore 'this' properly */}
+        {/* <form action='' className='store-selector' onSubmit={this.goToStore.bind(this)}> */}
         {/* comment */}
         <h2>Please Enter a Store</h2>
-        <input type='text' required placeholder='Store Name' defaultValue={getFunName()} ref={(input) => { this.storeInput = input}} />
+        <input type='text' required placeholder='Store Name' defaultValue={getFunName()} ref={(input) => { this.storeInput = input; }} />
         <button type='submit'>Visit Store -></button>
       </form>
     );
@@ -40,6 +39,6 @@ class StorePicker extends React.Component {
 /* Tells react that StorePicker wants router */
 StorePicker.contextTypes = {
   router: React.PropTypes.object
-}
+};
 
 export default StorePicker;
